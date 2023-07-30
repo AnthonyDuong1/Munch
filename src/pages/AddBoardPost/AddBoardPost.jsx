@@ -6,6 +6,7 @@ class AddBoardPost extends Component {
   state = {
     invalidForm: true,
     formData: {
+      addedBy: this.props.user._id,
       name: "",
       ingredients: "",
       directions: "",
@@ -39,7 +40,6 @@ class AddBoardPost extends Component {
 
           <label htmlFor="recipe_name">Recipe Name:</label>
           <form className="" ref={this.formRef} onSubmit={this.handleSubmit}>
-            <input type="hidden" name="addedBy" value={this.props.user._id} />
             <div className="">
               <input
                 type="text"
