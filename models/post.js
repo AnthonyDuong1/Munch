@@ -13,7 +13,7 @@ const replySchema = new Schema(
 
 const postSchema = new Schema(
   {
-    addedBy: { type: Schema.Types.ObjectId, ref: "User" },
+    addedBy: { type: Schema.Types.ObjectId },
     name: { type: String, required: true },
     ingredients: { type: [String], required: true },
     directions: { type: String, required: true },
